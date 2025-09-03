@@ -9,7 +9,11 @@
 
     <style name="Theme.MiniApp.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
-    <style name="Theme.MiniApp" parent="android:Theme.Material.Light.NoActionBar" />
+    <style name="Theme.MiniApp" parent="android:Theme.Material.Light.NoActionBar">
+        <!-- 确保包含必要的窗口属性 -->
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
 
     <style name="Theme.AndroidAnimationExercise" parent="android:Theme.Material.Light.NoActionBar" />
 </resources>
