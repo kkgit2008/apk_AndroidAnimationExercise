@@ -1,16 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- 对应Manifest中的@style/ComposeApp.Theme -->
-    <style name="ComposeApp.Theme" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- 可自定义主题颜色（需在values/colors.xml中定义对应颜色值） -->
+    <!-- 先继承Material Components主题以获取必要的属性，再继承Material3主题 -->
+    <style name="ComposeApp.Theme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- 继承Material3主题的特性 -->
+        <item name="parent">Theme.Material3.DayNight.NoActionBar</item>
+        
+        <!-- 确保包含必要的窗口属性 -->
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        
+        <!-- 自定义主题颜色 -->
         <item name="colorPrimary">@color/purple_500</item>
         <item name="colorPrimaryDark">@color/purple_700</item>
         <item name="colorAccent">@color/teal_200</item>
     </style>
 
     <!-- 对应Manifest中的@style/Theme.MiniApp -->
-    <style name="Theme.MiniApp" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- 根据需要添加自定义属性 -->
+    <style name="Theme.MiniApp" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- 继承Material3主题的特性 -->
+        <item name="parent">Theme.Material3.DayNight.NoActionBar</item>
+        
+        <!-- 确保包含必要的窗口属性 -->
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        
+        <!-- 根据需要添加其他自定义属性 -->
     </style>
 </resources>
     
