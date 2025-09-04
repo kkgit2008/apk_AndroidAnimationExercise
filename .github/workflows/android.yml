@@ -80,8 +80,10 @@ jobs:
             ls -la ${{ env.ANDROID_DIR }}/app/build/outputs/
             echo ">>${{ env.ANDROID_DIR }}/app/build/outputs/apk/:"
             ls -la ${{ env.ANDROID_DIR }}/app/build/outputs/apk/
-            echo ">>${{ env.ANDROID_DIR }}/app/build/outputs/apk/${{ matrix.build_type }}:"
-            ls -la ${{ env.ANDROID_DIR }}/app/build/outputs/apk/${{ matrix.build_type }}
+            echo ">>apk files path:"
+            cd ${{ env.ANDROID_DIR }}/app/build/outputs/apk/ && find -name *.apk
+            //echo ">>${{ env.ANDROID_DIR }}/app/build/outputs/apk/${{ matrix.build_type }}:"
+            //ls -la ${{ env.ANDROID_DIR }}/app/build/outputs/apk/${{ matrix.build_type }}
 
       - name: Copy ${{ matrix.build_type }} APK
         run: |
