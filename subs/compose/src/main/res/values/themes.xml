@@ -1,11 +1,11 @@
 <resources>
 
-    <style name="ComposeApp.Theme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+    <style name="ComposeApp.Theme" parent="android:Theme.Material.Light.NoActionBar">
     </style>
 
-    <style name="Theme.MiniApp.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="Theme.MiniApp.AppBarOverlay" parent="android:Theme.Material.Light.NoActionBar" />
 
-    <style name="Theme.MiniApp.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+    <style name="Theme.MiniApp.PopupOverlay" parent="android:Theme.Material.Light.NoActionBar" />
 
     <style name="Theme.MiniApp" parent="android:Theme.Material.Light.NoActionBar">
     </style>
